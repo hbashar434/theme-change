@@ -71,11 +71,12 @@ const Register = () => {
             <div className="form-control mt-6">
               <button className="btn btn-primary">Register</button>
             </div>
-            <label className="label">
-              <Link to="/login" className="label-text-alt link link-hover">
-                Already have an account?
-              </Link>
-            </label>
+            <Link
+              to="/login"
+              className="label-text-alt link link-hover hover:text-primary"
+            >
+              Already have an account? Please Login
+            </Link>
           </form>
         </div>
       </div>
