@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .dark {
+  @apply bg-slate-600 text-white;
+}
+
+.light {
+  @apply bg-white text-black;
+} */

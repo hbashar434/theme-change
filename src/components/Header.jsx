@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
+import { ThemeContext } from "../utilities/ThemeContext";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const handleLogOut = () => {
     logOut()
@@ -57,6 +60,13 @@ const Header = () => {
             </button>
           </Link>
         )}
+        <button className="pl-6" onClick={toggleTheme}>
+          {theme === "light" ? (
+            <MdDarkMode size={30} />
+          ) : (
+            <MdLightMode size={30} />
+          )}
+        </button>
       </div>
     </div>
   );

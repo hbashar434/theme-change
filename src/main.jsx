@@ -11,6 +11,7 @@ import AuthProviders from "./providers/AuthProviders";
 import Orders from "./components/Orders";
 import PrivateRoutes from "./routes/PrivateRoutes";
 import Profile from "./components/Profile";
+import { ThemeProvider } from "./utilities/ThemeContext";
 
 const router = createBrowserRouter([
   {
@@ -51,8 +52,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProviders>
-      <RouterProvider router={router} />
-    </AuthProviders>
+    <ThemeProvider>
+      <AuthProviders>
+        <RouterProvider router={router} />
+      </AuthProviders>
+    </ThemeProvider>
   </React.StrictMode>
 );
