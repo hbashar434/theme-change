@@ -60,8 +60,8 @@ const Header = () => {
             </button>
           </Link>
         )}
-        <button className="pl-6" onClick={toggleTheme}>
-          {theme === "light" ? (
+        <button className="pl-6" onClick={()=>toggleTheme(!theme)}>
+          {theme? (
             <MdDarkMode size={30} />
           ) : (
             <MdLightMode size={30} />
